@@ -1,4 +1,6 @@
-import { AppBar, Typography, Toolbar, Button} from "@mui/material";
+import { Menu } from "@mui/icons-material";
+import { Box, AppBar, Typography, Toolbar, Button, IconButton} from "@mui/material";
+
 
 
 export default function Nav(){
@@ -8,10 +10,23 @@ export default function Nav(){
                 <Typography variant="h6" component="div" sx={{ flexGrow: 1}}>
                     My Website
                 </Typography>
-
-                <Button color="inherit">HOME</Button>
-                <Button color="inherit">ABOUT</Button>
-                <Button color="inherit">CONTACT</Button>
+                
+                    <IconButton
+                        color="inherit"
+                        sx={{ display: { md:"none"},}}
+                    >
+                        < Menu />
+                    </IconButton>
+                    <Box 
+                    sx={{
+                        display: { xs: "none", md: "block"},
+                    }}
+                >
+                    <Button color="inherit">HOME</Button>
+                    <Button color="inherit">ABOUT</Button>
+                    <Button color="inherit">CONTACT</Button>
+                </Box>
+                
             </Toolbar>
         </AppBar>
     );

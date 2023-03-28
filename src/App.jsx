@@ -11,13 +11,13 @@ function App() {
       <Nav />
       <Container maxWidth="lg">
         <Grid container spacing={2}>
-          <Grid item xs={3}>
+          <Grid item md={3} sx={{ display: {xs:"none", md: "block"}, mt: 3 }}>
             <Sidebar />
           </Grid>
-          <Grid item xs={6}>
+          <Grid item md={6} xs={12} sx={{justifyContent:"center", alignItems:"center", mt: 5 }}>
             <Content />
           </Grid>
-          <Grid item xs={3}>
+          <Grid item md={3} sx={{ display: {xs:"none", md: "block"}, mt: 5 }}>
             <Rightbar />
           </Grid>
           
